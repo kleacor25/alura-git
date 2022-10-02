@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+
+<script>
+    function saltarLinea() {
+
+        document.write("<br>");
+    }
+
+    function mostrar(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var numero1 = prompt("Digite el primer número");
+    var numero2 = prompt("Digite el segundo número");
+
+    function multiplicar (numero1,numero2){
+        return numero1*numero2;
+    }
+
+    mostrar("El valor de " + numero1 + " veces " + numero2 + " es: " + multiplicar(numero1,numero2));
+
+</script>

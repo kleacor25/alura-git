@@ -1,0 +1,47 @@
+<meta charset="UTF-8">
+<h1>Juego: ADIVINA EL NÚMERO</h1>
+<br>
+
+<script>
+ function linebreak() {
+         document.write("<br><br><br>");
+ };
+
+ function imprimir(frase) {
+         document.write(frase);
+         linebreak();
+ };
+
+var numeroPensado = Math.round(Math.random()*10);
+var intentos = parseInt(prompt(" Ingrese un número de intentos "));
+
+var contador = 1;
+
+
+while (contador <= intentos){
+
+    var numlanzado = parseInt(prompt(" Ingrese un número entre 0 y 10: "));
+
+        if (numeroPensado == numlanzado){
+             alert ("Usted acertó, en el intento " + contador + " El numero pensado era " + numeroPensado);
+                break;
+                         }  
+        
+        else { 
+                alert ("Usted erró"); 
+
+               }
+                    contador++;   
+                   
+ }
+
+ if (numeroPensado == numlanzado){
+    imprimir ("Usted acertó, en el intento " + intentos + " El numero pensado era " + numeroPensado);
+                 }
+    else {
+    imprimir ("Usted erró, el número pensado era: " + numeroPensado);
+ }
+
+ imprimir ("FIN"); 
+
+</script>

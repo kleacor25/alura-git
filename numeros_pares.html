@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+<h1> NUMEROS PARES DE UN INTERVALO </h1>
+<br>
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var contador = parseInt(prompt("Ingrese valor inicial del intervalo: "));
+    //iniciando en cero
+        
+    var limite = parseInt(prompt("Ingrese valor final del intervalo: "));
+
+    while(contador < limite) {
+        contador = contador + 2; 
+        imprimir(contador);
+      }
+
+    imprimir("FIN");
+
+</script>

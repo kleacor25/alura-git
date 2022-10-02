@@ -1,0 +1,43 @@
+<canvas width="600" height="400"> </canvas>
+
+<script>
+
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+
+
+        pincel.fillStyle = "lightgrey"; //caracteristica-propiedad color
+        pincel.fillRect(0,0,600,400);
+        
+        function disenarCircunferencia (x,y,radio){
+            pincel.fillStyle ="blue";
+            pincel.beginPath();
+            pincel.arc(x,y,radio,0,2*Math.PI); //relacion de parametros
+            pincel.fill();                     //usamos MAth.PI para agilizar el radio
+
+       }
+        
+       function limpiarPantalla(){
+
+         pincel.clearRect(0,0,600,400); //clearRect limpia y grafica hast ala final posiciona
+      
+        }
+
+
+        var x=0;
+        function actualizarPantalla(){
+            limpiarPantalla();
+            disenarCircunferencia (x,20,10);
+            x++;
+            
+        }
+
+        setInterval(actualizarPantalla,50); //1000 tiempo en miliseegundo
+
+       // setInterval(disenarCircunferencia(x,20,10),1000);
+
+    
+       
+       
+
+    </script>

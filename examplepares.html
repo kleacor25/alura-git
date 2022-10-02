@@ -1,0 +1,21 @@
+<meta charset="utf-8">
+<h1>Del 1 al 100</h1>        
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var cont=0;
+    while(cont<=100){
+        if (cont%2==0) {
+            imprimir(cont);
+        }    
+        cont++;
+    }
+    imprimir("FIN");
+</script>

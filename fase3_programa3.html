@@ -1,0 +1,47 @@
+<canvas width="600" height="400"> </canvas>
+
+<script>
+
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+
+
+        pincel.fillStyle = "grey"; //caracteristica-propiedad color
+        pincel.fillRect(0,0,600,400); 
+
+
+
+       /* function exhibirAlerta(evento){
+        console.log(evento) // se muestra que hace en trnasfondo el programa
+         alert("usted hizo un click") ; // se envia el pop up
+      }
+      pantalla.onclick=exhibirAlerta; // comando para relacionar el click e pantalla
+                                         y que se ejecute lo ordenado en la   funcions
+      
+      */
+
+      function exhibirAlerta(evento){
+         var x = evento.pageX - pantalla.offsetLeft; //quitar mm de sobra de la pantalla a la izquierda para coordenadas (0,0)
+         var y = evento.pageY - pantalla.offsetTop; //quitar mm de sobra de la pantalla a la izquierda para coordenadas (0,0)
+         
+         console.log(evento); //mostrar en consola las coordenadas al hacer click
+         alert(x +","+ y) ;
+      }
+
+      function dibujarCirculo(evento){
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;
+
+         pincel.fillStyle ="blue";
+         pincel.beginPath(); //iniciar camino/direccion para graficar el circulo
+         pincel.arc (x,y,10,0, 2*3.14); // "0" es el angulo inicial
+         pincel.fill();     //dibuja el circulo
+         console.log( x + "," + y);
+      }
+
+
+     //pantalla.onclick = exhibirAlerta;
+     pantalla.onclick = dibujarCirculo; // al hacer click dibujara el circulo
+
+
+    </script>

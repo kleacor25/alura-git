@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+<h1>PROGRAMA CALCULAR IMC</h1>
+<br>
+
+<script>
+ function linebreak() {
+         document.write("<br><br><br>");
+ }
+
+ function imprimir(frase) {
+         document.write(frase);
+         linebreak();
+ }
+
+ function calcularImc(peso,estatura,nombre) {
+
+    imc= peso/(estatura*estatura);
+   imprimir("El IMC calculado de " + nombre +   " es " + imc);
+
+ }
+
+ calcularImc(52,1.62, "Emerson");
+ calcularImc(73,1.65, "Isai");
+
+</script>

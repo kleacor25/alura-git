@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+<h1> AÑOS DE LOS MUNDIALES DE LA FIFA </h1>
+<br>
+
+<script>
+ function linebreak() {
+         document.write("<br><br><br>");
+ };
+
+ function imprimir(frase) {
+         document.write(frase);
+         linebreak();
+ };
+
+var firstMundial = 1930;
+var anhoActual = parseInt(prompt("Ingrese año actual"));
+ 
+
+ while (firstMundial <= anhoActual){
+
+     imprimir(" Hubo mundial de la FIFA en el año " + firstMundial);
+                firstMundial = firstMundial + 4;
+    }
+ imprimir("Fin");
+</script>

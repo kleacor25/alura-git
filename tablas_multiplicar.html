@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+<h1> CALCULAR TABLAS DE MULTIPLICAR </h1>
+<br>
+
+<script>
+ function linebreak() {
+         document.write("<br><br><br>");
+ };
+
+ function imprimir(frase) {
+         document.write(frase);
+         linebreak();
+ };
+
+ var multiplicando = parseInt(prompt("Ingrese el multiplicando: "));
+ var multiplicador = 1;
+ 
+     
+ while (multiplicador <= 12) {
+    imprimir (multiplicando * multiplicador);
+    multiplicador ++;
+ }
+
+ imprimir ("FOR");
+
+ for ( var multiplicador = 1; multiplicador <=12; multiplicador ++) {
+
+    imprimir (multiplicando * multiplicador);
+    
+ } 
+  imprimir ("Fin");
+
+</script>
